@@ -1,0 +1,33 @@
+/* Styles for message bubbles */
+.message-sent {
+    background-color:#9747FF;
+    color: #fff;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+  }
+  
+  .message-received {
+    background-color: #f0f0f0;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+  }
+  
+  /* Styles for the form */
+  .form-group {
+    margin-bottom: 0;
+  }
+  
+  /* Optional: Adjust card height */
+  .card {
+    height: 400px; /* Adjust as needed */
+  }
+  .card-header{
+    color: black;
+  }
+  .bouton{
+    margin-top: 12px;
+    background-color: #9747FF;
+    
+  }

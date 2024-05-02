@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <img src="./assets/Image/logo.png"  class="image" alt="Description de l'image">
+    </div>
+
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+
+                <li><a  routerLink="/categorieAdmin">Categories</a></li>
+                
+                <li><a routerLink="/newsletter" >Newsletter</a></li>
+                
+                <li><a routerLink="/articlesAdmin">Articles</a></li>
+                
+
+                <li><a href="#">Comments</a></li>
+                
+
+                <li><a routerLink="/adminQuestions">Questions</a></li>
+                
+<li><a routerLink="/ContactAdmin">Contact</a></li>
+                <li><a routerLink="/Account" style="color:#6246EA;">Accounts</a></li>
+                
+
+                <li><a routerLink="/bestPracticesAdmin">Best Practices</a></li>
+                
+
+                <li><a routerLink="/websit-management">Website 
+                    management</a></li>
+
+                  
+
+
+            </ul>
+        </div>
+    
+        <div class="main-content">
+            <h1 style="color:#2B3674;text-align: center;">User’s accounts</h1>
+          
+            <table>
+                <thead>
+                    <tr>  
+                        <th>Users</th>
+
+                        <th>Remove</th>
+
+
+
+                    </tr>
+                </thead>
+                    <tbody>
+                        
+                        <tr *ngFor="let user of Users">
+                            <td>{{ user.email }}</td>
+                            <td><button type="button" (click)="removeClient(user.id)" class="blanc">remove</button></td>
+  
+  
+                          
+                        </tr>
+                        <tr>
+                            <div class="center">
+                                <button type="button" class="view-all-button" (click)="getAllUser()">View All Accounts</button>
+                            </div>
+                        </tr>
+                      </tbody>
+
+                    <!-- Ajoutez d'autres lignes pour chaque employé -->
+            </table>
+        </div>
+    </div>
+  
+    
+</body>
+</html>

@@ -1,0 +1,10 @@
+<app-header></app-header>
+
+<div  *ngIf="police">
+    <h2 style="background-color: #9747FF; height:100px;width: 1900PX;text-align: center;">Our Privacy Policies</h2>
+
+
+    <div  class="margin" [innerHTML]="sanitizedText"></div>
+
+</div>
+<app-footer></app-footer>

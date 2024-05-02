@@ -1,0 +1,226 @@
+.colorBackgroundMove{
+    background-color:#9747FF;
+    color:#FBFBFB;
+    border-color:#9747FF;
+    padding-top: 12PX;
+padding-bottom: 12PX;
+padding-left: 12px;
+padding-right: 12px;
+border-radius: 12px;
+margin-left: 12px;
+}
+
+
+
+.colorContourMove{
+    color:#9747FF;
+    border-radius: 12px;
+    padding-top: 12PX;
+padding-bottom: 12PX;
+padding-left: px;
+padding-right: 20px;
+margin-left: 200px;}
+
+.nav-item{
+margin-left: 30px;}
+.block{
+    display: block;
+    justify-content: center;
+}
+
+.move{
+    color:#9747FF;
+    border-color:#9747FF;
+        background-color: #FBFBFB;
+        border-radius: 12px;
+
+
+width: 70px;
+height: 40px;
+border-radius: 8px;
+}
+.sendbouton{
+    background-color:#9747FF;
+    color:#FBFBFB;
+    border-color:#9747FF;
+  margin-left: 12PX;
+border-radius: 12px;
+
+height: 50PX;
+}
+.send{
+    display: flex;
+    align-items: center;
+}
+.move2{
+    color:#9747FF;
+    border-color:#9747FF;
+        background-color: #FBFBFB;
+        border-radius: 12px;
+
+
+}
+.blanc{
+    background-color:#9747FF;
+    color:#FBFBFB;
+    margin-left: 12PX;
+    border-color:#9747FF;
+    border-radius: 12px;
+    width: 70px;
+    height: 40px;
+    border-radius: 8px;
+    
+
+}
+h1{
+    color:#9747FF;
+    margin-left: 40px;
+    
+}
+.boutonAlign {
+  display: flex; /* Utiliser un conteneur flexible */
+  align-items: center; /* Aligner les éléments verticalement */
+  justify-content: flex-end; /* Aligner les éléments horizontalement à droite */
+margin-left: 70px;
+}
+
+h6{
+    color:#0A215E;
+    margin-left: 40px;
+
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-content {
+    flex: 1;
+}
+
+.right-content {
+    flex: 1;
+    text-align: right;
+
+}
+.image2 {
+    width: 500px; /* Largeur souhaitée */
+    height: auto; /* Hauteur auto pour maintenir les proportions de l'image */
+    height: 500px;
+}
+.fas{
+    margin-left: 5px;
+}
+.block{
+    display: flex;
+}
+    /* Définition de la classe pour l'image supérieure de la carte */
+.card-img-top {
+    /* Définition de la hauteur de l'image */
+    height: 60px;
+    /* Définition de la largeur de l'image */
+    width: 60px;
+    /* Centrer horizontalement l'image */
+    margin-left: auto;
+    margin-right: auto;
+    /* Définir l'affichage comme bloc pour que les marges automatiques fonctionnent */
+    display: block;
+    /* Ajouter de l'espace au-dessus de l'image */
+    margin-top: 30px;
+}
+.card-title{    text-align: center;
+
+}
+
+
+.mettreEmail{
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 5px 10px 18px #888888;
+width: 1200px;
+height: 70px;
+margin-left: 100PX;
+margin-bottom: 30px;
+margin-top: 30px;}
+.mettreEmail h4 {
+    margin-left: 30px; /* Ajouter un espacement sous le titre */
+}
+.mettreEmail input.email {
+    width: 552px; /* Largeur de l'input */
+    height: 42px; /* Hauteur de l'input */
+    margin: auto; /* Centrer l'input horizontalement */
+    display: block;
+     /* Permettre la prise en compte de la marge auto */
+     margin-left: 40px;
+}
+
+.card{
+    flex: 0 0 auto;
+
+     width: 18rem;
+     margin-left: 12px;
+}
+.center-container{
+    margin-left: 80px;
+} 
+   .talk {
+        background-color: rgba(151, 71, 255, 0.6);
+    }
+        .image-cercle{
+            border-radius: 50%;
+            width: 50px;
+            height: 40px;
+        }
+        .align{
+            display: flex;
+            align-items: center;
+        }
+        .bleu{
+               background: linear-gradient(to right, #9747FF 0%, #9747FF 100%);
+            ;
+            display: flex;
+            justify-content: center;
+        }
+     
+        .formulaire {
+            width: 100%; /* Ajustez la largeur du formulaire */
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            height: 90%;
+            margin-top: 30px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            background-color: #F5F5FF;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #9747FF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .testimonial-container {
+            display: flex;
+            overflow-x: auto;
+          }
+          
+          .testimonial {
+            flex: 0 0 auto;
+            margin-right: 10px; /* Espacement entre les témoignages */
+          }

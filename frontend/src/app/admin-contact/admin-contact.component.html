@@ -1,0 +1,148 @@
+<div class="container">
+    <img src="./assets/Image/logo.png"  class="image" alt="Description de l'image">
+</div>
+<div class="dashboard-container">
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+
+            <li><a  routerLink="/categorieAdmin">Categories</a></li>
+            
+            <li><a routerLink="/newsletter" >Newsletter</a></li>
+            
+            <li><a routerLink="/articlesAdmin">Articles</a></li>
+            
+
+            
+
+            <li><a routerLink="/adminQuestions">Questions</a></li>
+            
+            <li><a routerLink="/ContactAdmin" style="color:#6246EA;">Contact</a></li>
+            <li><a routerLink="/Account">Accounts</a></li>
+            
+
+            <li><a routerLink="/bestPracticesAdmin">Best Practices</a></li>
+            
+
+            <li><a routerLink="/websit-management">Website 
+                management</a></li>
+
+              
+
+
+        </ul>
+    </div>
+
+               
+    <div class="main-content">
+        <h2 style="color:#2B3674">User Contacts</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Message</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let contact of contacts">
+                    <td>{{ contact.id }}</td>
+                    <td>{{ contact.firstName }}</td>
+                    <td>{{ contact.lastName }}</td>
+                    <td>{{ contact.email }}</td>
+                    <td>{{ contact.message }}</td>
+                    <td>
+                        <button (click)="openPopup(contact)" class="move">Reply</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    <!-- Popup pour répondre à un contact -->
+    <div *ngIf="showPopup" class="popup">
+        <div class="popup-content">
+            <h3 style="margin-bottom: 20px;">Reply to Contact             <span class="close" (click)="closePopup()">&times;</span>
+            </h3>
+            <div>
+                <textarea id="replyMessage" name="replyMessage" [(ngModel)]="replyMessage" rows="4" cols="50"></textarea>
+            </div>
+            <button (click)="replyToContact()" class="send-button">Send</button>
+        </div>
+    </div>
+
+
+<br>
+<br>
+    <h2 style="color:#2B3674"> Questions from the 'Get in Touch'</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Message</th>
+                <th>Action</th>
+
+
+               
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let contact2 of touches">
+                
+                <td>{{ contact2.email }}</td>
+                <td>{{ contact2.message }}</td>
+                <td>
+                    <button (click)="openPopup2(contact2)" class="move">Reply</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <br>
+   <!-- Interface utilisateur pour gérer les témoignages (partie admin) -->
+<div class="admin-testimonials">
+    <!-- Formulaire pour ajouter un nouveau témoignage -->
+    <h2>Add a new testimonial
+
+
+
+
+
+    </h2>
+    <form (submit)="addTestimonial()">
+        <div>
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author" [(ngModel)]="newTestimonial.author" required>
+        </div>
+        <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" [(ngModel)]="newTestimonial.message" required></textarea>
+        </div>
+        <button type="submit" class="move">Add</button>
+    </form>
+
+    <!-- Liste des témoignages ajoutés -->
+    <h2>Liste des témoignages</h2>
+    <div *ngFor="let testimonial of testimonials">
+        <p><strong>{{ testimonial.author }}</strong>: {{ testimonial.message }}</p>
+    </div>
+</div>
+</div>
+
+<!-- Popup pour répondre à un contact -->
+<div *ngIf="showPopup2" class="popup">
+    <div class="popup-content">
+        <h3>Reply to Contact  </h3>
+        <span (click)="closePopup()">&times;</span>
+
+        <div>
+            <textarea id="replyMessage" name="replyMessage"  [(ngModel)]="replyMessage2" rows="4" cols="50"></textarea>
+
+        </div>
+        <button (click)="replyToContact2()" class="send-button">Send</button>
+    </div>
+</div>
+</div>

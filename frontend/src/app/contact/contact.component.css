@@ -1,0 +1,134 @@
+body {
+    font-family: 'DM Sans';
+    font-style: normal;
+    min-height: 100vh;
+    position: relative;
+}
+
+.container {
+    overflow: hidden;
+ /* pour contenir les éléments flottants */
+}
+form{
+    margin-top: 70px;
+}
+.cont {
+    float: right; /* place le formulaire à droite */
+    width: 50%;
+    height: 50%;
+}
+
+.contact-info {
+    float: left; /* place les informations de contact à gauche */
+    width: 40%; /* ajuste la largeur des informations de contact */
+    text-align: left; /* Alignement du texte à gauche */
+    height: 647px
+    ;
+    background-color: rgba(151, 71, 255, 0.69);
+margin-top:30px
+;
+}
+
+/* Réglages spécifiques à la section des informations de contact */
+.contact-info .let,
+.contact-info .le,
+.contact-info .la {
+    margin-top: 70px;
+    margin-right: 20px;
+}
+
+.contact-info .let img,
+.contact-info .le img,
+.contact-info .la img {
+    width: 50px;
+    height: 50px;
+}
+
+.contact-info .let p,
+.contact-info .le p,
+.contact-info .la p {
+    font-size: 18px;
+    text-decoration: underline;
+}
+
+.contact-info .la {
+    margin-right: -77px;
+}
+
+.contact-info h2 {
+    font-weight: 700;
+    text-align: center;
+    margin-top: 30PX;
+    font-size: 30px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    color: #ffffff;
+}
+
+.contact-info p {
+    display: inline-block;
+    margin-left: 30px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    color: #ffffff;
+}
+
+
+
+/* Réglages supplémentaires pour le formulaire */
+.form-group {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #8D8D8D;
+}
+
+input[type="text"],
+input[type="email"],
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-color: #8D8D8D; /* Élimine le bord */
+    border-radius: 50px;
+    
+
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-row .form-group {
+    width: 48%;
+    padding-left: 12px;
+}
+
+.form-group {
+    padding-left: 12px;
+}
+
+.form-row .form-group:last-child {
+    width: 100%;
+}
+
+.form-row .form-group label {
+    margin-bottom: 10px;
+}
+
+button {
+    width: 120px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: rgba(151, 71, 255, 0.69);
+    color: white;
+    text-align: center;
+    margin-top: -40px;
+    margin-left: 15px;
+}

@@ -1,0 +1,105 @@
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">          
+        <img src="./assets/Image/logo.png" alt="Description de l'image">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/about">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a href="javascript:void(0)" class="nav-link dropbtn">category</a>
+            <div class="dropdown-content">
+              <li *ngFor="let categorie of Categorie">
+                  <button type="button" class="nav-link tagsBouton" [routerLink]="['/categorie', categorie.id]">
+                      {{ categorie.nomCatalogue}}
+                  </button>
+              </li>
+          </div>
+          
+        </li>
+        
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/article">Articles</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/tips" >Tips</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/allQuestions" >Question</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/faq">FAQ</a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/ContactUs" >ContactUs</a>
+          </li>
+          <li class="nav-item">
+            <div class="boutonAlign">
+                <ng-container *ngIf="isLoggedIn;">
+                    <div class="imageicon">
+                      <img *ngIf="userProfile.image" (click)="show()" [src]="userProfile.image" style="height: 30px;margin-right: 5px;   border-radius: 50px;margin-left: 200px;      top:45px; " alt="Profile Image">
+
+
+                    </div>
+                  </ng-container>
+                <ng-container *ngIf="!isLoggedIn;">
+                  <!-- Afficher les boutons "Sign in" et "Register" -->
+                    <button type="button" routerLink="/signIn" class="move">Sign in</button>
+                    <button type="button"routerLink="/signUp" class="blanc">Register</button>
+                </ng-container>
+            </div>
+           </li>
+
+            
+          </ul>
+          <div class="over-lay" *ngIf="AfficheCard">
+
+
+            <div class="card2">
+                <button type="button" class="btn-close" (click)="close()"></button>
+                <div class="sub-menu-wrap">
+                    <div class="sub-menu">
+                        <div class="user-info">
+                           <img [src]="userProfile.image">
+                            <h6>{{userProfile.email}}</h6>
+                        </div>
+                        <hr>
+                        <a routerLink="/infoSetting" class="sub-menu-link">
+                            <img src="https://img.freepik.com/icones-gratuites/utilisateur_318-563642.jpg?w=360"
+                                style='font-size:24px;background-color: #9747FF;'>
+                            <p  >Edit Profile</p>
+        
+        
+                        </a>
+                       
+                        
+                        <a  (click)="logout()" class="sub-menu-link">
+                            <img
+                                src="https://static.vecteezy.com/system/resources/previews/000/575/503/original/vector-logout-sign-icon.jpg"style='font-size:24px;background-color: #9747FF;'>
+                            <p>LogOut</p>
+                        </a>
+                     </div>
+                </div>
+        
+        
+            </div>
+        
+        </div>
+      </div>
+    </div>
+  </nav>

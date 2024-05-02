@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <img src="./assets/Image/logo.png" class="image" alt="Description de l'image">
+    </div>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+
+                <li><a  routerLink="/categorieAdmin">Categories</a></li>
+                
+                <li><a routerLink="/newsletter" >Newsletter</a></li>
+                
+                <li><a routerLink="/allArticlAdmin">Articles</a></li>
+                
+
+                
+
+                <li><a routerLink="/adminQuestions">Questions</a></li>
+                
+<li><a routerLink="/ContactAdmin">Contact</a></li>
+                <li><a routerLink="/Account">Accounts</a></li>
+                
+
+                <li><a routerLink="/bestPracticesAdmin" style="color:#6246EA;">Best Practices</a></li>
+                
+
+                <li><a routerLink="/websit-management">Website management</a></li>
+
+                  
+
+
+            </ul>
+        </div>
+    
+        <div class="main-content">
+            <h1 style="color:#2B3674; text-align: center;" >Got a new trick under your sleeve? </h1>
+            <form class="newsletter-form">
+                <label for="category"><b>Category</b></label>
+                <input type="text" name="title" id="category" [(ngModel)]="tip.title" class="input-field">
+                <label for="description"><b>Description</b></label>
+                <textarea id="description" name="description" rows="4" [(ngModel)]="tip.description" required placeholder="Message" class="input-field"></textarea>
+                <button (click)="addTip()" class="move">Add</button>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tips Category</th>
+                        <th>Tips Description</th>
+
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let tip of tips">
+                        <td>{{ tip.title }}</td>
+                        <td>{{ tip.description }}</td>
+
+                        <td>
+                            <button (click)="removeTip(tip.id)" class="move">Remove</button>
+                        </td>
+                    
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

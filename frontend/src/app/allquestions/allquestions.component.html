@@ -1,0 +1,56 @@
+<app-header></app-header>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#"style="color:#9747FF;font-size: 17px;">Questions</a></li>
+    
+                <li><a href="#" style="color:black;margin-left: 40px; line-height: 30px ; size:20px;" routerLink="/addQuestion">Write Questions</a></li>
+                <li><a href="#" style="color:black;margin-left: 40px;" routerLink="/allQuestions"> Read Questions</a></li>
+                
+                
+    
+                
+    
+                
+                
+                <li><a href="#" style="color:#9747FF; font-size: 17px;">Tags</a></li>
+                <li *ngFor="let categorie of Categorie"><button type="button"class="tagsBouton" (click)="fetchQuestionsByCategoryId(categorie.id)">{{ categorie.nomCatalogue}}</button></li>
+
+                   
+    
+    
+    
+    
+                  
+    
+    
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="row">
+      
+        <h5> Number of Questions {{nbreQuestion}}   </h5>
+      
+        <div class="col-md-4" *ngFor="let question of questions; let i = index">
+            <div class="card" style="width:300PX;height: 270px;TOP:20PX;">
+                <div class="flex">
+                    <!-- Afficher l'image de l'utilisateur -->
+                    <img class="imagehh" [src]="users[i].image" style="height: 30px; border-radius: 50px;">
+                  
+                    <!-- Afficher le nom de l'utilisateur -->
+                    <p>{{ users[i].userName }} </p>
+                </div>
+                <div class="card-body">
+                    <!-- Afficher la question -->
+                    <p class="card-title" style="color: #00000066;">{{ question.question.length > 50 ? (question.question | slice:0:50) + '...' : question.question }}</p>
+                </div>
+                <!-- Afficher le nom de la catégorie -->
+                <button class="tagsBouton3" >{{ ListCatgeorie[i].nomCatalogue }}</button>
+                <div class="card-footer">
+                    <button style="color:#9747FF; border:none" [routerLink]="['/answers', question.id, users[i].id]"><b>View</b></button>
+                </div>
+            </div>
+            <br>
+        </div>
+                </div>
+        </div>

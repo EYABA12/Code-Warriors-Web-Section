@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <img src="./assets/Image/logo.png"  class="image" alt="Description de l'image">
+    </div>
+
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+
+                <li><a  routerLink="/categorieAdmin">Categories</a></li>
+                
+                <li><a routerLink="/newsletter" >Newsletter</a></li>
+                
+                <li><a routerLink="/articlesAdmin" style="color:#6246EA;">Articles</a></li>
+                
+
+                
+
+                <li><a routerLink="/adminQuestions">Questions</a></li>
+                
+<li><a routerLink="/ContactAdmin">Contact</a></li>
+                <li><a routerLink="/Account">Accounts</a></li>
+                
+
+                <li><a routerLink="/bestPracticesAdmin">Best Practices</a></li>
+                
+
+                <li><a routerLink="/websit-management">Website 
+                    management</a></li>
+
+                  
+
+
+            </ul>
+        </div>
+    
+        <div class="main-content">
+            <h1>Articles</h1>
+            <button type="button" class="move"routerLink="/articlesAdmin" style="background-color: #9747FF;width: 150px; height: 50px;border-radius: 20px;margin-left:1300px;">Create Article</button>
+
+          
+            <table>
+                <thead>
+                    <tr>  
+
+                        <th>Title</th>
+                        <th>Date</th>
+                        <th>Remove</th>
+
+
+
+                    </tr>
+                </thead>
+                    <tbody>
+                        
+                        <tr *ngFor="let article of articlesDto">
+
+                            <td>{{ article.titre }}
+                            
+                            </td>
+                            <td>{{ article.startDate | date: 'dd/MM/yyyy' }}</td>
+                            <td><button type="button" (click)="removeArticle(article.id)" class="blanc">remove</button></td>
+  
+  
+                          
+                          </tr>
+                          <tr>
+                            
+                            </tr>
+                      </tbody>
+
+            </table>
+        </div>
+    </div>
+  
+    
+</body>
+</html>

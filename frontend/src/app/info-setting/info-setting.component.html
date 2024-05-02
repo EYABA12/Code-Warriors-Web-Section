@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <app-header></app-header>
+    
+    <div class="center">
+            <!-- Input de type fichier caché avec un identifiant "fileInput" -->
+            <input type="file" id="fileInput" style="display: none" (change)="handleFile($event)">
+            <label for="fileInput" class="upload-icon">
+            <!-- Affichage de l'image de profil si elle existe -->
+            <img *ngIf="userProfile.image"data-aos="fade-up" name="image" [src]="userProfile.image" alt="Profile Image" class="uploaded-image">
+            <!-- Affichage de l'image par défaut si aucune image de profil n'est définie -->
+            <img *ngIf="!userProfile.image" data-aos="fade-up" src="https://img.freepik.com/icones-gratuites/utilisateur_318-563642.jpg?w=360" alt="Default Profile Image" class="default-image">
+
+            <i class="fas fa-cloud-upload-alt icon-style"  style="color: rgba(151, 71, 255, 0.69); position: absolute; top: 37%; left: 54%; "></i> 
+        </label>   
+    </div>
+
+
+  
+
+
+    <div class="center2">
+    <form >
+            
+        <div class="form-row">
+            <div class="form-group">
+                <label for="First Name">First Name</label>
+                <input type="text" id="firstName" name="firstName" [(ngModel)]="userProfile.firstName" required placeholder="First Name">
+            </div>
+            <div class="form-group">
+                <label for="Last Name">Last Name</label>
+                <input type="text" id="LastName" name="lastName"[(ngModel)]="userProfile.lastName" required placeholder="Last Name">
+            </div>
+        </div>
+        
+        <div class="form-row">
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <input type="email" id="Email" name="email" [(ngModel)]="userProfile.email"required placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="Phone Number">Phone Number</label>
+                <input type="text" id="PhoneNumber" name="phoneNumber" [(ngModel)]="userProfile.phoneNumber"required placeholder="Phone Number">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="work">Your password</label>
+                <input type="password" id="password" name="password" required  [(ngModel)]="userProfile.password" placeholder="Your password">
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required [(ngModel)]="userProfile.confirmPassword" placeholder="Confirm Password">
+            </div>
+            
+        </div>
+     
+        <div class="bouton">
+        <button type="submit"  (click)="updateAndRefreshProfile()">Save the changes</button>
+        <button type="submit" routerLink="/home">Back to home</button>
+</div>
+    </form>
+    </div>
+</body>
+</html>

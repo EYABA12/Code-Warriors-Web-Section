@@ -1,0 +1,36 @@
+<app-header></app-header>
+<h4 class="titre">MEET OUR USERS</h4>
+<div class="bande">
+    <h3>Search </h3>
+    <div class="float">
+      <input type="text"  [(ngModel)]="searchEmail"  placeholder="what are you looking for ?">       
+
+    </div>
+</div>
+<br>
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-4" *ngFor="let user of Users.slice(1) | autocomplete: searchEmail; let i = index">
+                    <div class="card animated fadeInUp" data-aos="fade-up" style="width: 18rem;">
+                        <img class="card-img-top" [src]="user.image" alt="User Image">
+                        <div class="card-body">
+                            <h4 class="card-title"><i class="fas fa-id-card"  style="color:#9747FF"></i>
+                                {{user.userName}}</h4>
+
+                            <h5 class="card-title"><i class="fas fa-envelope"  style="color:#9747FF"></i>{{user.email}}</h5>
+
+                            <button class="move"   [routerLink]="['/profilUser',user.id ]"><b>View Profile</b></button>
+                            <button class="move"   [routerLink]="['/discussion',user.id ]"><b>Chat</b></button>
+
+                        </div>
+                    </div>
+        </div>
+    </div>
+</div>
+
+<!--Le fonctionnement du filtrage dans ce code repose sur 
+    l'utilisation d'un pipe Angular appelé AutocompletePipe-->
+
+ <!--Ce pipe est responsable de filtrer la liste des utilisateurs
+en fonction de la valeur saisie dans le champ de recherche.-->

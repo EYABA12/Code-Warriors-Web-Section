@@ -1,0 +1,13 @@
+
+    spring:
+      mail:
+        host: smtp.gmail.com
+        username: benamoreya57@gmail.com
+        password: ulqu vjxt dant cbhg
+        port: 587
+        properties:
+          mail:
+            smtp:
+              starttls:
+                enable: true
+              auth: true

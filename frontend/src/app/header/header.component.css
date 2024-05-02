@@ -1,0 +1,351 @@
+.colorBackgroundMove{
+    background-color:#9747FF;
+    color:#FBFBFB;
+    border-color:#9747FF;
+    padding-top: 12PX;
+padding-bottom: 12PX;
+padding-left: 12px;
+padding-right: 12px;
+border-radius: 12px;
+margin-left: 12px;
+}
+.user-info img {
+    width:          20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-top: -13px;
+  }
+
+  
+  li.dropdown {
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+
+  .user-info{
+    display: flex;
+    margin-top: 10px;
+
+  }
+  .user-info h6{
+    margin-left: 8px;
+    margin-top: -13px;
+  }
+
+.card2 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    max-height: 400px;
+    background-color: white;
+  
+    top: 90px;
+    position: fixed;
+    z-index: 9999;
+    text-align: center;
+    font-family: arial;
+    width: 244px;
+    height: 200px;
+    border-radius: 4px;
+  }
+  .close {
+    margin-left: 300px;
+    font-size: 30px;
+    margin-top: 0px;
+  }
+  
+  h5 {
+    color: rgb(17, 14, 14);
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  
+  .sub-menu-link {
+    text-decoration: none;
+    color: #000000;
+    display: flex;
+    justify-items: flex-start;
+    margin: 21px 20PX;
+    cursor: pointer;
+  }
+  .imageicon{
+    display: flex;}
+  .sub-menu-link img {
+    width: 40px;
+    background: #e5e5e5;
+    border-radius: 50%;
+    position: absolute;
+    left: 15px;
+    padding: 8px;
+  }
+  
+  .sub-menu-link p {
+    margin-left: 30px;
+    margin-top: 10px;
+    color: #343434
+  }
+  
+  .sub-menu-link:hover p {
+    font-weight: 550;
+  }
+  .sub-menu {
+    background-color:#9747FF;
+    padding: 20px;
+    margin: 3px;
+    height: 300px;
+  }
+  
+  .sub-menu hr {
+    height: 1px;
+    width: 100%;
+    background: black;
+    margin: -5px 0 10px;
+  }
+  
+  .btn-close {
+    /* Your existing styles for the close button */
+    color: #000000
+    ;
+    float: right;
+    font-size: 10px;
+    border-radius: 25px;
+    margin-right: 20px;
+    margin-top: 12px;
+  }
+  
+  .btn-close:hover,
+  .btn-close:focus {
+    /* Your existing styles for the close button hover/focus */
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+.colorContourMove{
+    color:#9747FF;
+    border-radius: 12px;
+    padding-top: 12PX;
+padding-bottom: 12PX;
+padding-left: px;
+padding-right: 20px;
+margin-left: 200px;}
+
+.nav-item{
+font-size: 18px;
+margin-left: 20px;
+}
+.block{
+    display: block;
+    justify-content: center;
+}
+
+.move{
+    color:#9747FF;
+    border-color:#9747FF;
+        background-color: #FBFBFB;
+        border-radius: 12px;
+
+        width: 100px;
+        height: 40px;
+border-radius: 8px;
+}
+.sendbouton{
+    background-color:#9747FF;
+    color:#FBFBFB;
+    border-color:#9747FF;
+  margin-left: 12PX;
+border-radius: 12px;
+
+height: 50PX;
+}
+.send{
+    display: flex;
+    align-items: center;
+}
+.move2{
+    color:#9747FF;
+    border-color:#9747FF;
+        background-color: #FBFBFB;
+        border-radius: 12px;
+        height: 700px;
+
+
+}
+.blanc{
+    background-color:#9747FF;
+    color:#FBFBFB;
+    margin-left: 12PX;
+    border-color:#9747FF;
+    border-radius: 12px;
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    
+
+}
+h1{
+    color:#9747FF;
+    margin-left: 40px;
+    
+}
+.boutonAlign {
+  display: flex; /* Utiliser un conteneur flexible */
+  align-items: center; /* Aligner les éléments verticalement */
+  justify-content: flex-end; /* Aligner les éléments horizontalement à droite */
+margin-left: 70px;
+}
+
+h6{
+    color:#0A215E;
+    margin-left: 40px;
+
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-content {
+    flex: 1;
+}
+
+.right-content {
+    flex: 1;
+    text-align: right;
+
+}
+.image2 {
+    width: 500px; /* Largeur souhaitée */
+    height: auto; /* Hauteur auto pour maintenir les proportions de l'image */
+    height: 500px;
+}
+.fas{
+    margin-left: 5px;
+}
+.block{
+    display: flex;
+}
+    /* Définition de la classe pour l'image supérieure de la carte */
+.card-img-top {
+    /* Définition de la hauteur de l'image */
+    height: 60px;
+    /* Définition de la largeur de l'image */
+    width: 60px;
+    /* Centrer horizontalement l'image */
+    margin-left: auto;
+    margin-right: auto;
+    /* Définir l'affichage comme bloc pour que les marges automatiques fonctionnent */
+    display: block;
+    /* Ajouter de l'espace au-dessus de l'image */
+    margin-top: 30px;
+}
+.card-title{    text-align: center;
+
+}
+
+
+.mettreEmail{
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 5px 10px 18px #888888;
+width: 1200px;
+height: 70px;
+margin-left: 50PX;
+margin-bottom: 30px;
+margin-top: 30px;}
+.mettreEmail h4 {
+    margin-left: 30px; /* Ajouter un espacement sous le titre */
+}
+.mettreEmail input.email {
+    width: 552px; /* Largeur de l'input */
+    height: 42px; /* Hauteur de l'input */
+    margin: auto; /* Centrer l'input horizontalement */
+    display: block;
+     /* Permettre la prise en compte de la marge auto */
+    
+     margin-left: 40px;
+}
+
+.card{
+     width: 18rem;
+     margin-left: 12px;
+}
+.center-container{
+    margin-left: 80px;
+} 
+   .talk {
+        background-color: rgba(151, 71, 255, 0.6);
+    }
+        .image-cercle{
+            border-radius: 50%;
+            width: 50px;
+            height: 40px;
+        }
+        .align{
+            display: flex;
+            align-items: center;
+        }
+        .bleu{
+               background: linear-gradient(to right, #9747FF 0%, #9747FF 100%);
+            ;
+            display: flex;
+            justify-content: center;
+        }
+     
+        .formulaire {
+            width: 100%; /* Ajustez la largeur du formulaire */
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            height: 90%;
+            margin-top: 30px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            background-color: #F5F5FF;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #9747FF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }

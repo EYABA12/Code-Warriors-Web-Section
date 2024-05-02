@@ -1,0 +1,47 @@
+<body>
+    <app-header></app-header>
+<div class="container">
+    <div class="cont">
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for="firstName">First Name:</label>
+              <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="contact.firstName" required>
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name:</label>
+              <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="contact.lastName" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" id="email" name="email" [(ngModel)]="contact.email" required>
+            </div>
+            <div class="form-group">
+              <label for="phoneNumber">Phone Number:</label>
+              <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" [(ngModel)]="contact.phoneNumber" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea class="form-control" id="message" name="message" [(ngModel)]="contact.message" required></textarea>
+            </div>
+            <button type="submit" class="move">Submit</button>
+          </form>
+    </div>
+
+    <div class="contact-info">
+        <h2>Contact Information</h2>
+       
+        <div class="let">
+                <img src="./assets/Image/bxs_phone-call.png" style="height: 24px; margin-left:30px; width: 24px;" alt="Email">
+                <p>+216 26 868 733</p>
+       
+        <div class="le">
+                <img src="./assets/Image/Vector.png" style="height: 24px; width: 24px;margin-left:30px;" alt="Phone">
+                <p>mehrezhoussem7gmail.com </p>
+           
+        </div>
+        <div class="la">
+          <i class="fas fa-map-marker-alt" style="color: white;height: 24px; width: 24px;margin-left:30px;"></i>
+                <p>zeramdine monastir</p>
+        </div>
+    </div>
+</div>

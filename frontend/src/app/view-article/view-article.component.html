@@ -1,0 +1,23 @@
+<app-header></app-header>
+
+<body>
+<div class="container">
+    <h1 class="article-title">{{articlesDto.titre}}</h1>
+    <br>
+    <img [src]="articlesDto.image" alt="Article Image"  style=" margin-top: 30px;"       class="article-image">
+    <div class="article-content">
+        <h1>Description</h1>
+        <p>{{articlesDto.description}}</p>
+        <h1>Full description</h1>
+
+        <p>{{articlesDto.full_description}}</p>
+
+        
+       
+        
+    </div>
+  
+</div>
+</body>
+<app-footer></app-footer>
+

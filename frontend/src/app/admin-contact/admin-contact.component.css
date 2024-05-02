@@ -1,0 +1,201 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container {
+    display: flex;
+}
+
+.sidebar {
+    color: #fff;
+    width: 250px;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    color:#8D8D8D;
+
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+    margin-top: 20PX;
+}
+textarea {
+    width: 100%;
+    padding: 20px;
+    font-size: 16px;
+    border-color: #8D8D8D; /* Élimine le bord */
+    border-radius: 50px;
+    
+
+}
+.sidebar ul li a {
+    color:#8D8D8D;
+    margin-left: 20PX;
+    text-decoration: none;
+}
+.container {
+    display: flex;
+    justify-content: center; /* Aligne horizontalement au centre */
+    align-items: center; /* Aligne verticalement au centre */
+}
+
+.container img {
+    max-width: 100%; /* Garantit que l'image ne dépasse pas la largeur de la div */
+    max-height: 100%; /* Garantit que l'image ne dépasse pas la hauteur de la div */
+}
+
+.main-content {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.main-content h1 {
+    margin-bottom: 20px;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-form label {
+    margin-bottom: 10px;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.blanc{
+    border-radius: 20%;
+    color: black;
+    border-color: #9747FF;
+    background-color: #fff;
+
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 50px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+.newsletter-form button {
+    color: #624BFF;
+    cursor: pointer;
+    background-color: #fff;
+    width: 100px;
+    height:40px;
+    border-radius: 30px;
+    border-color: #9747FF;
+    margin-top: 30px;
+}
+
+.newsletter-form button:hover {
+    background-color: #555;
+}
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .move{
+    border-radius: 20%;
+    color: black;
+    border-color: #9747FF;
+    background-color: #fff;
+
+}
+  .send-button{
+    background-color: #9747FF;
+    color: #fff;
+    border:none;
+    border-radius: 30%;
+  }
+  
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 280px;
+    right: 650px;
+    cursor: pointer;
+  }
+  /* Style pour la section des témoignages d'administration */
+.admin-testimonials {
+    max-width: 600px; /* Définissez une largeur maximale pour mieux contrôler la mise en page */
+    margin: auto; /* Centrez la section horizontalement */
+  }
+  
+  /* Style pour les titres des sections */
+  .admin-testimonials h2 {
+    margin-top: 20px; /* Ajoutez un espace en haut du titre */
+    margin-bottom: 10px; /* Ajoutez un espace en bas du titre */
+  }
+  
+  /* Style pour le formulaire d'ajout de témoignage */
+  .admin-testimonials form {
+    margin-bottom: 20px; /* Ajoutez un espace en bas du formulaire */
+  }
+  
+  .admin-testimonials form div {
+    margin-bottom: 15px; /* Ajoutez un espace entre les éléments du formulaire */
+  }
+  
+  .admin-testimonials label {
+    display: block; /* Affichez les labels sur une nouvelle ligne */
+    margin-bottom: 5px; /* Ajoutez un espace en bas de chaque label */
+  }
+  
+  .admin-testimonials input[type="text"],
+  .admin-testimonials textarea {
+    width: 100%; /* Définissez la largeur des champs de texte à 100% */
+    padding: 8px; /* Ajoutez un peu de rembourrage */
+    margin-bottom: 10px; /* Ajoutez un espace en bas des champs de texte */
+    border: 1px solid #ccc; /* Ajoutez une bordure */
+    border-radius: 5px; /* Ajoutez des coins arrondis */
+  }
+  
+  
+ 
+  
+  /* Style pour chaque témoignage */
+  .admin-testimonials div p {
+    margin-bottom: 10px; /* Ajoutez un espace en bas de chaque témoignage */
+  }
+  
+  .admin-testimonials div p strong {
+    font-weight: bold; /* Mettez en gras le nom de l'auteur */
+  }
+  
+  

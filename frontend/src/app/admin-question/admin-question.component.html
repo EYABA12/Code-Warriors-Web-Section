@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <img src="./assets/Image/logo.png"  class="image" alt="Description de l'image">
+    </div>
+
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+
+                <li><a  routerLink="/categorieAdmin">Categories</a></li>
+                
+                <li><a routerLink="/newsletter" >Newsletter</a></li>
+                
+                <li><a routerLink="/allArticlAdmin">Articles</a></li>
+                
+
+                
+
+                <li><a routerLink="/adminQuestions" style="color:#6246EA;">Questions</a></li>
+                
+                <li><a routerLink="/ContactAdmin">Contact</a></li>
+                <li><a routerLink="/Account">Accounts</a></li>
+                
+
+                <li><a routerLink="/bestPracticesAdmin">Best Practices</a></li>
+                
+
+                <li><a routerLink="/websit-management">Website 
+                    management</a></li>
+
+                  
+
+
+            </ul>
+        </div>
+    
+        <div class="main-content">
+            <h1>Questions</h1>
+          
+            <table>
+                <thead>
+                    <tr>  
+
+                        <th>Question Creator</th>
+                        
+                        <th>Question Category</th>
+                        <th>Remove</th>
+
+
+
+                    </tr>
+                </thead>
+
+                        
+                <tr *ngFor="let question of Questions;let i=index">
+                    <td>
+
+            <img class="imagehh" [src]="users[i]?.image" style="height: 30px; border-radius: 50px;">
+                    {{users[i]?.userName}}
+                    </td>
+                    <td>{{ ListCatgeorie[i]?.nomCatalogue }}</td>
+
+                    <td><button type="button" class="move" (click)="removeQuestion1(users[i].id)" class="blanc">remove</button></td>
+
+
+                  
+                  </tr>
+                          
+
+                    <!-- Ajoutez d'autres lignes pour chaque employé -->
+            </table>
+<br>
+<h6 style="color:#6246EA">Questions containing these words will be automatically removed :</h6>
+<!-- Champ de texte pour saisir les mots filtrés -->
+<input type="text" name="newWord" [(ngModel)]="newWord" placeholder="Enter filter words...">
+<p *ngFor="let word of filteredWords;let i=index" >
+<li>{{word.word}}</li>
+</p>
+<!-- Bouton pour ajouter un mot à la liste des mots filtrés -->
+<button type="button" class="move" (click)="addWord()">Add Word</button>
+<!-- Liste des mots filtrés actuels -->
+
+       
+        </div>
+    </div>
+  
+    
+</body>
+</html>

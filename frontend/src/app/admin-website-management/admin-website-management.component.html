@@ -1,0 +1,129 @@
+<div class="container">
+    <img src="./assets/Image/logo.png"  class="image" alt="Description de l'image">
+</div>
+<div class="dashboard-container">
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+
+            <li><a  routerLink="/categorieAdmin">Categories</a></li>
+            
+            <li><a routerLink="/newsletter" >Newsletter</a></li>
+            
+            <li><a routerLink="/articlesAdmin">Articles</a></li>
+            
+
+            
+
+            <li><a routerLink="/adminQuestions">Questions</a></li>
+            
+<li><a routerLink="/ContactAdmin">Contact</a></li>
+            <li><a routerLink="/Account">Accounts</a></li>
+            
+
+            <li><a routerLink="/bestPracticesAdmin">Best Practices</a></li>
+            
+
+            <li><a routerLink="/websit-management" style="color:#6246EA;">Website 
+                management</a></li>
+
+              
+
+
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h3 style="color:#2B3674;">FAQ</h3>
+        <div class="questions-container">
+            <div *ngFor="let qa of questionsAndAnswers">
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="question">
+                            <button (click)="toggleQuestion($event)">
+                                {{ qa.question }}
+                                <i class="fas fa-chevron-down d-arrow"></i>
+                            </button>
+                            <p>{{ qa.answer }}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="action-buttons">
+                            <div class="button-container">
+                                <button (click)="removeFaq(qa.id)" class="red">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="question">
+                        <button (click)="toggleQuestion($event)">
+                            <input type="text" style="border: none;" [(ngModel)]="faq.question" name="faqQuestion" required placeholder="write your faq">
+                            <i class="fas fa-chevron-down d-arrow"></i>
+                        </button>
+                        <p><input type="text" style="border:none;" [(ngModel)]="faq.answer" name="faqAnswer" placeholder="your answer" required></p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="action-buttons">
+                        <div class="button-container">
+                            <button class="red" (click)="AddFaq()">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3 style="color:#2B3674;">Values</h3>
+        <div class="questions-container">
+            <div *ngFor="let qa of titleAndDescription">
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="question">
+                            <button (click)="toggleQuestion($event)">
+                                {{ qa.title }}
+                                <i class="fas fa-chevron-down d-arrow"></i>
+                            </button>
+                            <p>{{ qa.description }}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="action-buttons">
+                            <div class="button-container">
+                                <button (click)="removeValue(qa.id)" class="red">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="question">
+                        <button (click)="toggleQuestion($event)">
+                            <input type="text" style="border: none;" [(ngModel)]="value.title" name="valueTitle" required placeholder="write your value">
+                            <i class="fas fa-chevron-down d-arrow"></i>
+                        </button>
+                        <p><input type="text" style="border:none;" [(ngModel)]="value.description" name="valueDescription" placeholder="your answer" required></p>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="action-buttons">
+                        <div class="button-container">
+                            <button class="red" (click)="AddValue()">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10">
+                <h3 style="color:#2B3674;">Police</h3>
+                <input type="text" [(ngModel)]="police.text" name="policeText" [size]="police.text.length">
+                <button (click)="updateText()" class="red">Update</button>
+            </div>
+        </div>
+    </div>
+</div>

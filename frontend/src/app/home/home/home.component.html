@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</head>
+<body>
+<!-- navbar.component.html -->
+<app-header></app-header>
+
+  <div class="container">
+    <div class="left-content">
+      <h1>Coding Chronicles: </h1>
+      <h1>Unraveling Solutions </h1>
+     <h1> in the Developer's Universe</h1>
+     <br>
+    <h6>When life presents more challenges than you have answers,</h6>
+    <br>
+      <h6>let ECJE make your journey easier with intelligent solutions.</h6>    </div>
+    <div class="right-content">
+        <img  class="image2"src="./assets/Image/Banner.png" alt="Description de l'image">
+    </div>
+</div>
+<div class="block">
+        <button type="button" routerLink="/police" class="move2">
+
+           Privacy Policy
+          </button>
+        
+          <button type="button" routerLink="/allUsers" class="colorBackgroundMove"> View Our Users <i class="fas fa-chevron-right"></i>
+        </button>
+</div>
+<br>
+<br>
+<div class="center-container">
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="./assets/Image/Bussnis.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Business Strategy</h5>
+          <p class="card-text">A business strategy is a powerful tool for helping you reach your goals, defining the methods and tactics.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="./assets/Image/div.singleService_imgBox__Y4fto (1).png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">UX/UI Design</h5>
+          <p class="card-text">A business strategy is a powerful tool for helping you reach your goals, defining the methods and tactics.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="./assets/Image/div.singleService_imgBox__Y4fto (5).png"alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">App Development</h5>
+          <p class="card-text">A business strategy is a powerful tool for
+            helping you reach your goals, defining the
+            methods and tactics</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="./assets/Image/Bussnis.png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Business Strategy</h5>
+          <p class="card-text">A business strategy is a powerful tool for helping you reach your goals, defining the methods and tactics.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="./assets/Image/div.singleService_imgBox__Y4fto (1).png" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">UX/UI Design</h5>
+          <p class="card-text">A business strategy is a powerful tool for helping you reach your goals, defining the methods and tactics.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="./assets/Image/div.singleService_imgBox__Y4fto (5).png"alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">App Development</h5>
+          <p class="card-text">A business strategy is a powerful tool for
+            helping you reach your goals, defining the
+            methods and tactics</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<section id="about-section">
+
+  <app-about></app-about>
+</section>
+<section id="team-section">
+
+  <app-team></app-team>
+</section>
+<br>
+<div class="talk">
+<br>
+
+
+
+<h1>Customers Talk About Us</h1>
+<h6>Customer support represents the resources within your company that provide technical assistance
+ 
+    <br>
+    to consumers after they purchase a product or service.</h6>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4" *ngFor="let testimonial of testimonials.slice(0, initialTestimonialCount)">
+          <div class="col-auto carte">
+            <div class="card" style="width: 300px;">
+              <div class="card-body">
+                <p class="card-text">{{ testimonial.message }}</p>
+                <div class="align">
+                  <img src="./assets/Image/admin.png" class="image-cercle">
+                  <h5 class="card-title">{{ testimonial.author }}</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+   <div *ngIf="testimonials && initialTestimonialCount < testimonials.length">
+    <a href="#" (click)="loadMoreTestimonials()">
+      Read More <i class="fas fa-chevron-down"></i>
+    </a>
+  </div>
+  </div>
+    <!-- Ajouter une flèche pour défiler vers la droite -->
+ 
+ 
+  <div class="bleu">
+    <div class="verticlae">
+        
+        <form class="formulaire" method="POST" (submit)="onSubmitgetInTouch()">
+          <h2 style="color:#9747FF">Get In Touch</h2>
+          <h3>We are here for you! How can we help?</h3>
+            <input type="text" id="name"  [(ngModel)]='touch.name'   name="name"placeholder="Enter your name"><br>
+
+            <input type="email" id="email" [(ngModel)]='touch.email' name="email" placeholder="Enter your email address"><br>
+
+            <textarea id="message" name="message"    [(ngModel)]='touch.message'   rows="4" cols="50"placeholder="Go ahead, We are listening..."></textarea><br>
+
+            <input type="submit" value="Send">
+        </form>
+      </div>
+    </div>
+    <div class="mettreEmail">
+          <h4>Subscribe to our news</h4>
+          <form  class="send" [formGroup]="emailForm" (ngSubmit)="onSubmit()">
+                <input  class="email" id="email" name="email" formControlName="email" type="email" required    placeholder="Write your Email">
+                <button type="submit"  class="sendbouton">Send<i class="fas fa-chevron-right"></i>
+                </button>  
+          </form>
+      </div>
+</body>
+<app-footer></app-footer>
+</html>

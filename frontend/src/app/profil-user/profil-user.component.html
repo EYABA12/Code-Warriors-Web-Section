@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- Partie principale (cartes de questions) -->
+    <div class="col-md-8">
+      <h4>Question History</h4>
+      <div class="question-cards">
+        <div class="card" *ngFor="let question of questions">
+          <div class="card-body">
+            <p class="card-title">Posted 31 December 2024</p>
+            <h6 class="card-text">{{ question.question }}</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Barre latérale -->
+    <div class="col-md-4 fixed-right">
+      <div class="card">
+        <div class="card-header">
+          Profil
+        </div>
+        <div class="card-body">
+          <div class="cover-photo">
+            <!-- Ici, vous pouvez insérer l'image de couverture de l'utilisateur -->
+            <img [src]="userConnect.image" class="profile-image">
+          </div>
+
+          <h5 class="card-title" *ngIf="userConnect.firstName && userConnect.lastName">{{ userConnect.firstName }} {{ userConnect.lastName }}</h5>
+
+          <p *ngIf="userConnect.email"><b style="color:#9747FF ;"><i class="fas fa-envelope"></i></b>: {{ userConnect.email }}</p>
+
+
+          <p *ngIf="userConnect.email"><b style="color:#9747FF ;"><i class="fas fa-map-marker-alt"></i></b>From </p>
+
+          <!-- Vérifier si l'utilisateur a un numéro de téléphone défini -->
+          <p *ngIf="userConnect.phoneNumber"><b style="color:#9747FF ;"><i class="fas fa-phone"></i></b>: {{ userConnect.phoneNumber }}</p>
+          
+          <!-- Afficher les intérêts de l'utilisateur -->
+          <p class="mt-3"> <b   style="color:#9747FF ;"   >Interests</b></p>
+          <ul>
+            <li>web development</li>
+            <li>data scientist</li>
+
+          </ul>
+          
+          <!-- Vous pouvez également ajouter d'autres éléments comme des boutons pour éditer le profil, se déconnecter, etc. -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

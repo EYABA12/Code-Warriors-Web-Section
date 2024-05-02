@@ -1,0 +1,44 @@
+<body>
+    <div class="container">
+        <h2 class="titre">New Article</h2>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="titre">Title:</label>
+                <input type="text" class="form-control" id="titre" name="titre" [(ngModel)]="article.titre" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea class="form-control" id="description" name="description" [(ngModel)]="article.description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="full_description">Full Description:</label>
+                <textarea class="form-control" id="full_description" name="full_description" [(ngModel)]="article.full_description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="startDate">Start Date:</label>
+                <input type="date" class="form-control" id="startDate" name="startDate" [(ngModel)]="article.startDate" required>
+            </div>
+
+            <!-- Choose image -->
+            <div class="form-group">
+                <!-- Hidden file input with id "fileInput" -->
+                <input type="file" id="fileInput" style="display: none" (change)="handleFile($event)">
+                <label for="fileInput" class="upload-icon">
+                    <b>Choose an image</b>
+                    <i class="fas fa-download" style="color: rgba(151, 71, 255, 0.69); "></i>
+                </label>
+            </div>
+
+
+            <div class="form-group">
+                <label for="categories">Categories:</label>
+                <div *ngFor="let category of Categorie">
+                    <input type="radio" id="{{ category.id }}" name="categories" [(ngModel)]="selectedCategoryId" [value]="category.id">
+                    <label for="{{ category.id }}">{{ category.nomCatalogue }}</label><br>
+                </div>
+            </div>
+
+            <button type="submit" style="background-color:#9747FF" [disabled]="submitDisabled" class="btn btn-primary">Create a new article</button>
+        </form>
+    </div>
+</body>

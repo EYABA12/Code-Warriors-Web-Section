@@ -1,0 +1,77 @@
+<div class="dashboard-container">
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+
+            <li><a  routerLink="/categorieAdmin" style="color:#6246EA;">Categories</a></li>
+            
+            <li><a routerLink="/newsletter" >Newsletter</a></li>
+            
+            <li><a routerLink="/articlesAdmin">Articles</a></li>
+            
+
+            <li><a href="#">Comments</a></li>
+            
+
+            <li><a routerLink="/adminQuestions">Questions</a></li>
+            
+<li><a routerLink="/ContactAdmin">Contact</a></li>
+            <li><a routerLink="/Account">Accounts</a></li>
+            
+
+            <li><a routerLink="/bestPracticesAdmin">Best Practices</a></li>
+            
+
+            <li><a routerLink="/websit-management">Website 
+                management</a></li>
+
+              
+
+
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <h2 style="color:#2B3674">Articles Categories</h2>
+      
+        <table>
+            <thead>
+                <tr>  
+                    <th style="color:#9747FF">Title</th>
+
+                
+                    <th style="color:#9747FF">delete</th>
+
+
+
+                </tr>
+            </thead>
+                <tbody>
+                    
+                    <tr *ngFor="let categorie of Categorie">
+                        <td>{{ categorie.nomCatalogue}} </td>
+                       <td><button type="button" class="red" (click)="removeCategory(categorie.id)">remove</button></td>
+                      
+                      </tr>
+                      <tr>
+                        <div class="center">
+                            <tr>
+                                <td *ngIf="!showInput" colspan="5">
+                                    <button type="button" class="view-all-button" (click)="showInput = true">+ add category</button>
+                                </td>
+                                <td *ngIf="showInput" colspan="5">
+                                    <!-- Champ d'entrée pour saisir le nom de la nouvelle catégorie -->
+                                    <input type="text" [(ngModel)]="categorie.nomCatalogue" placeholder="Enter category name">
+                                    <!-- Bouton pour ajouter la nouvelle catégorie -->
+                                    <button type="button" class="view-all-button" (click)="addCategory()">Add</button>
+                                </td>
+                            </tr>                        </div>
+                        </tr>
+                  </tbody>
+
+                <!-- Ajoutez d'autres lignes pour chaque employé -->
+        </table>
+    </div>
+</div>
+
+

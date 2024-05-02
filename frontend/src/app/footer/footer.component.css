@@ -1,0 +1,57 @@
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.logo img {
+    width: 100px; /* Ajustez la taille selon vos besoins */
+    margin-left: 20px;
+}
+
+.categories,
+.contact {
+    flex: 1;
+}
+
+.categories h4,
+.contact h4 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+footer{
+    background-color:#9747FF;
+    padding: 20px 0;
+    text-align: center;
+    color:black;}
+
+.categories ul,
+.contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.categories li,
+.contact li {
+    margin-bottom: 5px;
+}
+
+.categories a,
+.contact a {
+    color:black;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 1.5;
+}
+
+.categories a:hover,
+.contact a:hover {
+    color:#f8f9fa;
+}

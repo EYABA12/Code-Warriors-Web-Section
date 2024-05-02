@@ -1,0 +1,67 @@
+
+
+<app-header></app-header>
+<h4 class="titre">OUR TIPS</h4>
+<div class="bande">
+    <h3>Search </h3>
+    <div class="float">
+      <input type="text"  [(ngModel)]="filterValue"  placeholder="what are you looking for ?">       
+
+    </div>
+</div>
+<div class="dashboard-container">
+    <div class="sidebar">
+        <ul>
+            <li><a href="#"style="color:black;"><b>TIPS CATEGORIES</b> 
+                
+                <div style="color:#6246EA;margin-left: 30px; margin-top: 20px;">
+                <p >Web Development</p>
+                <p >Data Science</p>
+                <p >Devops</p>
+                <p >Cyber Security</p>
+
+              
+
+
+                </div>
+            </a></li>
+
+
+        </ul>
+    </div>
+
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+<br>           
+        </div>
+
+        <!-- Content Row -->
+      <!-- Content Row -->
+
+      <div class="row">
+        <!-- Category Card - Data Science -->
+        <div class="col-xl-4" *ngFor="let tip of Tips | catalogueFilter: filterValue">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1 custom-title">{{ tip.title }}</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">{{ tip.description }}.</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-chart-bar fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+</div>
+
+<app-footer></app-footer>

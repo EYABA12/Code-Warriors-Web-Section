@@ -1,0 +1,52 @@
+h4{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+/* Style pour la barre latérale du profil */
+.profile-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0; /* Ajustez ceci à "left: 0;" si vous préférez la barre latérale à gauche */
+    height: 100%;
+    width: 100%; /* Ajustez la largeur selon vos besoins */
+    background-color: #f8f9fa; /* Couleur de fond */
+    border-left: 1px solid #dee2e6; /* Bordure de gauche */
+    padding: 20px;
+    overflow-y: auto; /* Permet de faire défiler la barre latérale si nécessaire */
+  }
+  .card-header{
+    background-color: #9747FF;
+    color:#fff;
+    text-align: center;
+  }
+  /* Style pour l'image de profil */
+  .profile-image {
+    width: 150px; /* Ajustez la taille de l'image selon vos préférences */
+    height: 150px;
+    border-radius: 50%; /* Pour obtenir une forme de cercle */
+    margin-bottom: 20px;
+    border: 1px solid #9747FF;
+  }
+  .card-text{
+    color: #9747FF;
+  }
+  /* Style pour les informations personnelles */
+  .profile-info {
+    margin-bottom: 20px;
+  }
+  
+  /* Style pour les intérêts de l'utilisateur */
+  .profile-interests {
+    margin-top: 20px;
+  }
+  
+  /* Style pour les éléments de la liste des intérêts */
+  .profile-interests ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .profile-interests ul li {
+    margin-bottom: 5px;
+  }
