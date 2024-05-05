@@ -6,5 +6,5 @@ learning by enabling users to share their ideas, ask questions, and explore comp
 - **Backend:** Spring Boot
 - **DataBases:** Mysql.
 - ## Demo
-[![Watch the video](https://github.com/nadaomri12/projectpfa2024/blob/master/screenshot.png)](https://drive.google.com/file/d/1mYzXnumHiGnkqcCuwlSH_0Xd9_14YNMb/view?usp=drive_link)
+[![Watch the video](https://github.com/EYABA12/code-warriors/blob/master/screenshot.PNG)](https://drive.google.com/file/d/1mYzXnumHiGnkqcCuwlSH_0Xd9_14YNMb/view?usp=drive_link)
 
